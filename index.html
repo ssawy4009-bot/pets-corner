@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets Corner - بيت حيوانك الأليف</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="assets/logo.jpg" alt="Pets Corner Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#products">منتجاتنا</a></li>
+                <li><a href="#clinic">العيادة</a></li>
+                <li><a href="#tips">نصائح</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+            <div class="nav-icons">
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>أهلاً بيك في <span class="highlight">Pets Corner</span></h1>
+                <p>كل اللي محتاجه أليفك في مكان واحد.. أكل، لعب، واكسسوارات بأعلى جودة.</p>
+                <a href="#products" class="btn btn-primary">تسوق الآن <i class="fas fa-paw"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">مين إحنا؟</h2>
+            <div class="about-content">
+                <p>إحنا في <strong>Pets Corner</strong> بنحب الحيوانات زيك بالظبط! هدفنا نوفرلك كل حاجة ممكن يحتاجها
+                    كلبك، قطتك، عصافيرك، أو حتى سمك الزينة بتاعك. بنضمنلك منتجات أصلية، أسعار مميزة، وتوصيل سريع لحد باب
+                    البيت.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">منتجاتنا المميزة</h2>
+
+            <!-- Category Filter -->
+            <div class="categories">
+                <button class="cat-btn active" data-category="all">الكل</button>
+                <button class="cat-btn" data-category="dog">كلاب</button>
+                <button class="cat-btn" data-category="cat">قطط</button>
+                <button class="cat-btn" data-category="bird">طيور</button>
+                <button class="cat-btn" data-category="fish">أسماك</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="products-container">
+                <!-- Products will be loaded here via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinic Section -->
+    <section id="clinic" class="section">
+        <div class="container">
+            <h2 class="section-title">خدماتنا الطبية</h2>
+            <div class="clinic-intro">
+                <p>في <strong>Pets Corner</strong>، العناية مش مجرد كلمة 💙</p>
+            </div>
+            <div class="clinic-grid">
+                <div class="service-card">
+                    <i class="fas fa-user-md"></i>
+                    <h3>عيادة مجهزة</h3>
+                    <p>عيادة مجهزة بالكامل للكشف على أليفك.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-microscope"></i>
+                    <h3>تحاليل وأشعة</h3>
+                    <p>معمل متكامل لعمل كافة التحاليل والأشعة.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-x-ray"></i>
+                    <h3>سونار</h3>
+                    <p>أحدث أجهزة السونار للتشخيص الدقيق.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-tooth"></i>
+                    <h3>تنظيف أسنان</h3>
+                    <p>العناية بصحة أسنان أليفك وتنظيف الجير.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-syringe"></i>
+                    <h3>عمليات جراحية</h3>
+                    <p>غرفة عمليات مجهزة على أعلى مستوى.</p>
+                </div>
+            </div>
+            <div class="clinic-footer">
+                <p>كل ده في مكان واحد، بإيد دكاترة فاهمين إن حيوانك مش مجرد "حيوان"... ده فرد من العيلة 💚</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section id="tips" class="section">
+        <div class="container">
+            <h2 class="section-title">نصائح لرعاية أليفك</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <i class="fas fa-bone"></i>
+                    <h3>التغذية السليمة</h3>
+                    <p>اختار الأكل المناسب لسن ونوع حيوانك عشان صحته تفضل تمام.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>الفحص الدوري</h3>
+                    <p>زيارة الطبيب البيطري بانتظام مهمة جداً للكشف المبكر عن أي مشاكل.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>اللعب والنشاط</h3>
+                    <p>اللعب مش بس ترفيه، ده مهم لنفسية وصحة حيوانك الأليف.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Payment Section -->
+    <section id="contact" class="section bg-dark text-white">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>تواصل معنا</h2>
+                    <p>عندك استفسار؟ عايز تطلب؟ كلمنا أو ابعتلنا على واتساب.</p>
+                    <a href="https://wa.me/201026794767" target="_blank" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> تواصل عبر واتساب
+                    </a>
+                    <p class="phone-number"><i class="fas fa-phone"></i> 01026794767</p>
+                    <p class="address"><i class="fas fa-map-marker-alt"></i> قويسنا – المنوفية – شارع صيدلية ميدو، بجوار
+                        Paia وأمام بيت التسالي</p>
+                </div>
+                <div class="payment-info">
+                    <h2>طرق الدفع</h2>
+                    <p>بنقبل الدفع عن طريق:</p>
+                    <div class="payment-methods">
+                        <div class="method">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>فودافون كاش</span>
+                        </div>
+                        <div class="method">
+                            <i class="fas fa-university"></i>
+                            <span>Instapay</span>
+                        </div>
+                    </div>
+                    <p class="payment-number">على رقم: <strong>01026794767</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>جميع الحقوق محفوظة &copy; 2025 Pets Corner</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
