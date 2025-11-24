@@ -22,66 +22,7 @@
 html {
     scroll-behavior: smooth;
 }
-/* --------- Variables --------- */
-:root {
-    --bg-color: #ffffff;
-    --text-color: #111111;
-    --primary-color: #3b82f6;
-}
 
-/* Dark theme variables */
-.dark-theme {
-    --bg-color: #0f172a;
-    --text-color: #f1f5f9;
-    --primary-color: #60a5fa;
-}
-
-/* --------- Global styles --------- */
-body {
-    background: var(--bg-color);
-    color: var(--text-color);
-    transition: background 0.4s ease, color 0.4s ease;
-    font-family: Arial, sans-serif;
-}
-
-/* --------- Toggle Button --------- */
-.theme-btn {
-    position: fixed;
-    top: 18px;
-    right: 18px;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    border: none;
-    background: var(--primary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    outline: none;
-    transition: background 0.3s ease, transform 0.2s ease;
-    font-size: 22px;
-}
-
-.theme-btn:hover {
-    transform: scale(1.1);
-}
-
-.theme-btn .sun {
-    display: block;
-}
-
-.dark-theme .theme-btn .sun {
-    display: none;
-}
-
-.theme-btn .moon {
-    display: none;
-}
-
-.dark-theme .theme-btn .moon {
-    display: block;
-}
 
 
 
@@ -581,5 +522,6 @@ footer {
     margin-left: 5px;
     color: var(--primary-color);
 }
+
 
 
