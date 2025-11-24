@@ -22,6 +22,29 @@
 html {
     scroll-behavior: smooth;
 }
+/* الوضع الفاتح (الافتراضي) */
+body {
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.3s;
+}
+
+/* الوضع الغامق */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* شكل الزر */
+#theme-toggle {
+    padding: 10px 20px;
+    background: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
 
 body {
     font-family: 'Cairo', sans-serif;
@@ -519,3 +542,4 @@ footer {
     margin-left: 5px;
     color: var(--primary-color);
 }
+
