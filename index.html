@@ -73,6 +73,11 @@
                 <button class="cat-btn" data-category="fish">أسماك</button>
             </div>
 
+            <!-- Subcategory Filter (Dynamic) -->
+            <div class="subcategories" id="subcategories-container">
+                <!-- Subcategory buttons will be loaded here via JS -->
+            </div>
+
             <!-- Products Grid -->
             <div class="products-grid" id="products-container">
                 <!-- Products will be loaded here via JS -->
@@ -154,6 +159,9 @@
                     <a href="https://wa.me/201026794767" target="_blank" class="whatsapp-btn">
                         <i class="fab fa-whatsapp"></i> تواصل عبر واتساب
                     </a>
+                    <a href="https://www.facebook.com/petaccessoreis?locale=ar_AR" target="_blank" class="facebook-btn">
+                        <i class="fab fa-facebook"></i> تابعنا على فيسبوك
+                    </a>
                     <p class="phone-number"><i class="fas fa-phone"></i> 01026794767</p>
                     <p class="address"><i class="fas fa-map-marker-alt"></i> قويسنا – المنوفية – شارع صيدلية ميدو، بجوار
                         Paia وأمام بيت التسالي</p>
@@ -180,12 +188,22 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>جميع الحقوق محفوظة &copy; 2025 Pets Corner</p>
+            <div class="footer-content">
+                <p>جميع الحقوق محفوظة &copy; 2025 Pets Corner</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/petaccessoreis?locale=ar_AR" target="_blank"
+                        aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://wa.me/201026794767" target="_blank" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-
 
 </html>
