@@ -9,13 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
-    <link rel="apple-touch-icon" href="assets/logo.jpg">
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    <link rel="apple-touch-icon" href="logo.jpg">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="extra.css">
 </head>
 
 <body>
-   
+
 
 
 
@@ -23,7 +24,7 @@
     <nav class="navbar">
         <div class="container">
             <a href="#" class="logo">
-                <img src="assets/logo.jpg" alt="Pets Corner Logo">
+                <img src="logo.jpg" alt="Pets Corner Logo">
             </a>
             <ul class="nav-links">
                 <li><a href="#home">الرئيسية</a></li>
@@ -34,6 +35,9 @@
                 <li><a href="#contact">تواصل معنا</a></li>
             </ul>
             <div class="nav-icons">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
                 <div class="menu-toggle">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -43,12 +47,11 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="container">
+        <div class="container hero-container">
             <div class="hero-content">
                 <h1>أهلاً بيك في <span class="highlight">Pets Corner</span></h1>
-                <p>كل اللي محتاجه أليفك في مكان واحد.. أكل، لعب، واكسسوارات بأعلى جودة.</p>
-                <a href="#products" class="btn btn-primary">تسوق الآن <i class="fas fa-paw"></i></a>
             </div>
+            <a href="#products" class="btn btn-primary hero-btn">تسوق الآن <i class="fas fa-paw"></i></a>
         </div>
     </section>
 
@@ -64,71 +67,216 @@
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section id="products" class="section bg-light">
+    <!-- Service Selector Section -->
+    <section id="service-selector" class="section">
         <div class="container">
-            <h2 class="section-title">منتجاتنا المميزة</h2>
-
-            <!-- Category Filter -->
-            <div class="categories">
-                <button class="cat-btn active" data-category="all">الكل</button>
-                <button class="cat-btn" data-category="dog">كلاب</button>
-                <button class="cat-btn" data-category="cat">قطط</button>
-                <button class="cat-btn" data-category="bird">طيور</button>
-                <button class="cat-btn" data-category="fish">أسماك</button>
-            </div>
-
-            <!-- Subcategory Filter (Dynamic) -->
-            <div class="subcategories" id="subcategories-container">
-                <!-- Subcategory buttons will be loaded here via JS -->
-            </div>
-
-            <!-- Products Grid -->
-            <div class="products-grid" id="products-container">
-                <!-- Products will be loaded here via JS -->
+            <h2 class="section-title">اختار الخدمة اللي محتاجها</h2>
+            <div class="selector-grid">
+                <div class="selector-card" id="select-clinic" onclick="toggleService('clinic')">
+                    <i class="fas fa-hospital-user"></i>
+                    <h3>العيادة البيطرية</h3>
+                    <p>خدمات طبية، عمليات، تطعيمات، وكشوفات</p>
+                </div>
+                <div class="selector-card active" id="select-shop" onclick="toggleService('shop')">
+                    <i class="fas fa-shopping-basket"></i>
+                    <h3>المحل والمستلزمات</h3>
+                    <p>أكل، ألعاب، إكسسوارات لكل الحيوانات</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Clinic Section -->
-    <section id="clinic" class="section">
-        <div class="container">
-            <h2 class="section-title">خدماتنا الطبية</h2>
-            <div class="clinic-intro">
-                <p>في <strong>Pets Corner</strong>، العناية مش مجرد كلمة </p>
-            </div>
-            <div class="clinic-grid">
-                <div class="service-card">
-                    <i class="fas fa-user-md"></i>
-                    <h3>عيادة مجهزة</h3>
-                    <p>عيادة مجهزة بالكامل للكشف على أليفك.</p>
+    <!-- Shop Section Wrapper -->
+    <div id="shop-wrapper">
+        <!-- Products Section -->
+        <section id="products" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">منتجاتنا المميزة</h2>
+
+                <!-- Category Filter -->
+                <div class="categories">
+                    <button class="cat-btn active" data-category="all">الكل</button>
+                    <button class="cat-btn" data-category="dog">كلاب</button>
+                    <button class="cat-btn" data-category="cat">قطط</button>
+                    <button class="cat-btn" data-category="bird">طيور</button>
+                    <button class="cat-btn" data-category="fish">أسماك</button>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-microscope"></i>
-                    <h3>تحاليل وأشعة</h3>
-                    <p>معمل متكامل لعمل كافة التحاليل والأشعة.</p>
+
+                <!-- Subcategory Filter (Dynamic) -->
+                <div class="subcategories" id="subcategories-container">
+                    <!-- Subcategory buttons will be loaded here via JS -->
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-x-ray"></i>
-                    <h3>سونار</h3>
-                    <p>أحدث أجهزة السونار للتشخيص الدقيق.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-tooth"></i>
-                    <h3>تنظيف أسنان</h3>
-                    <p>العناية بصحة أسنان أليفك وتنظيف الجير.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-syringe"></i>
-                    <h3>عمليات جراحية</h3>
-                    <p>غرفة عمليات مجهزة على أعلى مستوى.</p>
+
+                <!-- Products Grid -->
+                <div class="products-grid" id="products-container">
+                    <!-- Products will be loaded here via JS -->
                 </div>
             </div>
-            <div class="clinic-footer">
-                <p>كل ده في مكان واحد، بإيد دكاترة فاهمين إن حيوانك مش مجرد "حيوان"... ده فرد من العيلة </p>
+        </section>
+    </div> <!-- End Shop Wrapper -->
+
+    <!-- Clinic Section Wrapper -->
+    <div id="clinic-wrapper" style="display: none;">
+        <!-- Clinic Section -->
+        <section id="clinic" class="section">
+            <div class="container">
+                <h2 class="section-title">خدماتنا الطبية</h2>
+                <div class="clinic-intro">
+                    <p>في <strong>Pets Corner</strong>، العناية مش مجرد كلمة </p>
+                </div>
+                <div class="clinic-grid">
+                    <div class="service-card">
+                        <i class="fas fa-user-md"></i>
+                        <h3>عيادة مجهزة</h3>
+                        <p>عيادة مجهزة بالكامل للكشف على أليفك.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-microscope"></i>
+                        <h3>تحاليل وأشعة</h3>
+                        <p>معمل متكامل لعمل كافة التحاليل والأشعة.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-x-ray"></i>
+                        <h3>سونار</h3>
+                        <p>أحدث أجهزة السونار للتشخيص الدقيق.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-tooth"></i>
+                        <h3>تنظيف أسنان</h3>
+                        <p>العناية بصحة أسنان أليفك وتنظيف الجير.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-syringe"></i>
+                        <h3>عمليات جراحية</h3>
+                        <p>غرفة عمليات مجهزة على أعلى مستوى.</p>
+                    </div>
+                </div>
+                <div class="clinic-footer">
+                    <p>كل ده في مكان واحد، بإيد دكاترة فاهمين إن حيوانك مش مجرد "حيوان"... ده فرد من العيلة </p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Clinic Products Section -->
+        <section id="clinic-products" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">منتجات العيادة الطبية</h2>
+                <div class="categories">
+                    <button class="clinic-cat-btn active" data-clinic-category="all">الكل</button>
+                    <button class="clinic-cat-btn" data-clinic-category="deworming">أدوية ديدان</button>
+                    <button class="clinic-cat-btn" data-clinic-category="parasites">أدوية حشرات</button>
+                    <button class="clinic-cat-btn" data-clinic-category="immunity">تطعيمات ومناعة</button>
+                </div>
+                <div class="products-grid" id="clinic-products-container">
+                    <!-- Loaded via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Surgery Booking Section -->
+        <section id="surgery-booking" class="section">
+            <div class="container">
+                <h2 class="section-title">حجز العمليات الجراحية</h2>
+                <div class="surgery-booking-grid">
+                    <!-- Spay -->
+                    <div class="booking-card service-card">
+                        <i class="fas fa-venus text-primary"></i>
+                        <h3>Spay (تعقيم إناث)</h3>
+                        <p>عملية تعقيم الإناث لمنع الحمل والوقاية من الأمراض المستقبلية.</p>
+                        <p class="price" style="color:var(--primary-color); font-weight:bold; margin: 10px 0;">يُحدد بعد
+                            الكشف</p>
+                        <a href="https://wa.me/201026794767?text=مرحباً، أود الاستفسار عن حجز عملية Spay"
+                            target="_blank" class="btn btn-primary">احجز الآن <i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <!-- Castration -->
+                    <div class="booking-card service-card">
+                        <i class="fas fa-mars text-primary"></i>
+                        <h3>Castration (إخصاء)</h3>
+                        <p>عملية تعقيم الذكور للحد من السلوك العدواني وتحسين الصحة.</p>
+                        <p class="price" style="color:var(--primary-color); font-weight:bold; margin: 10px 0;">يُحدد بعد
+                            الكشف</p>
+                        <a href="https://wa.me/201026794767?text=مرحباً، أود الاستفسار عن حجز عملية Castration"
+                            target="_blank" class="btn btn-primary">احجز الآن <i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <!-- Other -->
+                    <div class="booking-card service-card">
+                        <i class="fas fa-stethoscope text-primary"></i>
+                        <h3>Other (عمليات طوارئ)</h3>
+                        <p>كسور، جروح، أو أي تدخل جراحي طارئ يتطلب عناية فورية.</p>
+                        <p class="price" style="color:var(--primary-color); font-weight:bold; margin: 10px 0;">التشخيص
+                            أولاً</p>
+                        <a href="https://wa.me/201026794767?text=مرحباً، لدي حالة طوارئ وأحتاج لحجز عملية"
+                            target="_blank" class="btn btn-primary" style="background:#dc3545;">تواصل للطوارئ <i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- X-Ray & Lab Section -->
+        <section id="xray-booking" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">حجز أشعة وتحاليل</h2>
+                <div class="xray-booking-grid">
+                    <div class="booking-card service-card">
+                        <i class="fas fa-x-ray text-primary"></i>
+                        <h3>أشعة X-Ray</h3>
+                        <a href="https://wa.me/201026794767?text=مرحباً، أود حجز موعد لأشعة X-Ray" target="_blank"
+                            class="btn btn-primary" style="margin-top:10px;">احجز <i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div class="booking-card service-card">
+                        <i class="fas fa-wave-square text-primary"></i>
+                        <h3>سونار Ultrasound</h3>
+                        <a href="https://wa.me/201026794767?text=مرحباً، أود حجز موعد لعمل سونار" target="_blank"
+                            class="btn btn-primary" style="margin-top:10px;">احجز <i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div class="booking-card service-card">
+                        <i class="fas fa-vial text-primary"></i>
+                        <h3>تحاليل معملية</h3>
+                        <a href="https://wa.me/201026794767?text=مرحباً، أود الاستفسار عن التحاليل المعملية"
+                            target="_blank" class="btn btn-primary" style="margin-top:10px;">استفسر <i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clinic Contact & Consultation Section -->
+        <section id="clinic-contact" class="section bg-dark text-white">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="online-consultation" style="border-top:none; margin-top:0; padding-top:0;">
+                        <h2>استشارة أونلاين وتواصل مع العيادة</h2>
+                        <p>دكتورك معاك في أي وقت لتشخيص حالة أليفك أونلاين، أو حجز موعد للعيادة.</p>
+                        <div class="consultation-actions">
+                            <a href="https://wa.me/201026794767?text=مرحباً، أريد حجز استشارة أونلاين مع الدكتور"
+                                target="_blank" class="whatsapp-btn">
+                                <i class="fab fa-whatsapp"></i> تواصل مع الدكتور
+                            </a>
+                            <a href="tel:01026794767" class="btn btn-primary btn-phone">
+                                <i class="fas fa-phone"></i> اتصال بالعيادة
+                            </a>
+                        </div>
+                        <p class="phone-number"><i class="fas fa-phone"></i> 01026794767</p>
+                        <p class="address"><i class="fas fa-map-marker-alt"></i> قويسنا – المنوفية – شارع صيدلية ميدو
+                        </p>
+                        <div class="payment-info" style="margin-top:20px;">
+                            <p>الدفع متوفر للاستشارات عبر:</p>
+                            <div class="payment-methods">
+                                <div class="method" style="flex-direction:row;">
+                                    <i class="fas fa-mobile-alt"></i> <span>فودافون كاش</span>
+                                </div>
+                                <div class="method" style="flex-direction:row;">
+                                    <i class="fas fa-university"></i> <span>Instapay</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div> <!-- End Clinic Wrapper -->
 
     <!-- Tips Section -->
     <section id="tips" class="section">
@@ -209,15 +357,9 @@
     </footer>
 
     <script src="script.js"></script>
-   
 
-  
+
+
 </body>
 
 </html>
-
-
-
-
-
-
