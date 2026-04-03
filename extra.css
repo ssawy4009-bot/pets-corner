@@ -1,0 +1,43 @@
+/* Product Icon Placeholder */
+.product-icon-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 160px;
+    background: linear-gradient(135deg, var(--section-bg-light), var(--card-bg));
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+.product-card:hover .product-icon-placeholder {
+    font-size: 4rem;
+    color: var(--accent-color);
+}
+.clinic-icon {
+    background: linear-gradient(135deg, rgba(216,67,21,0.06), rgba(255,87,34,0.12));
+}
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 2.4rem; }
+    .hero-content p  { font-size: 1.1rem; }
+}
+
+.hero-btn {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.3rem !important;
+    padding: 15px 45px !important;
+    border-radius: 40px !important;
+    box-shadow: 0 8px 25px rgba(216, 67, 21, 0.6) !important;
+    z-index: 10;
+}
+
+.hero-btn:hover {
+    transform: translateX(-50%) translateY(-5px) !important;
+    box-shadow: 0 12px 30px rgba(216, 67, 21, 0.8) !important;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem !important;
+}
