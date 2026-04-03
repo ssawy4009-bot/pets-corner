@@ -320,6 +320,7 @@ let currentSubcategory = 'all';
 function init() {
     renderProducts('all', 'all');
     setupEventListeners();
+    initClinic(); // Add clinic initialization
 }
 
 // Render Subcategory Buttons
@@ -385,7 +386,9 @@ function renderProducts(category, subcategory) {
         const whatsappLink = `https://wa.me/201026794767?text=${encodeURIComponent(message)}`;
 
         productCard.innerHTML = `
-            <img src="${product.image}" alt="${product.name}" class="product-img">
+            <div class="product-icon-placeholder">
+                <i class="fas fa-paw"></i>
+            </div>
             <div class="product-info">
                 <h3 class="product-title">${product.name}</h3>
                 <p class="product-price">${product.price} جنيه</p>
@@ -422,7 +425,21 @@ function setupEventListeners() {
     menuToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
     });
+
+    // Navbar Links Logic (Auto-Toggle Shop/Clinic)
+    const navItems = document.querySelectorAll('.nav-links a');
+    navItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            const targetId = item.getAttribute('href');
+            if (targetId === '#products') {
+                if(window.toggleService) window.toggleService('shop');
+            } else if (targetId === '#clinic' || targetId === '#clinic-contact' || targetId === '#clinic-products' || targetId === '#surgery-booking' || targetId === '#xray-booking') {
+                if(window.toggleService) window.toggleService('clinic');
+            }
+        });
+    });
 }
+
 
 // Setup Subcategory Listeners
 function setupSubcategoryListeners() {
@@ -442,5 +459,130 @@ function setupSubcategoryListeners() {
     });
 }
 
-// Start
+
+
+// --- NEW CLINIC LOGIC & THEME TOGGLE ---
+
+// Theme Toggle Logic
+const themeToggleBtn = document.getElementById('theme-toggle');
+if (themeToggleBtn) {
+    const body = document.body;
+    const themeIcon = themeToggleBtn.querySelector('i');
+
+    // Check Local Storage
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') {
+        body.classList.add('dark-mode');
+        themeIcon.classList.replace('fa-moon', 'fa-sun');
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+        } else {
+            localStorage.setItem('theme', 'light');
+            themeIcon.classList.replace('fa-sun', 'fa-moon');
+        }
+    });
+}
+
+// Service Toggle (Shop vs Clinic)
+window.toggleService = function(service) {
+    const shopWrapper = document.getElementById('shop-wrapper');
+    const clinicWrapper = document.getElementById('clinic-wrapper');
+    const selectShopBtn = document.getElementById('select-shop');
+    const selectClinicBtn = document.getElementById('select-clinic');
+
+    if (service === 'shop') {
+        shopWrapper.style.display = 'block';
+        clinicWrapper.style.display = 'none';
+        selectShopBtn.classList.add('active');
+        selectClinicBtn.classList.remove('active');
+    } else if (service === 'clinic') {
+        shopWrapper.style.display = 'none';
+        clinicWrapper.style.display = 'block';
+        selectClinicBtn.classList.add('active');
+        selectShopBtn.classList.remove('active');
+    }
+};
+
+// Clinic Products Data
+const clinicProducts = [
+    {
+        id: 'c1',
+        name: 'أقراص ديدان للقطط والكلاب',
+        price: 'يحدد بالعيادة',
+        category: 'deworming',
+        image: 'https://png.pngtree.com/png-vector/20230308/ourmid/pngtree-medicine-tablet-pills-vector-illustration-png-image_6641571.png'
+    },
+    {
+        id: 'c2',
+        name: 'أمبولات حشرات للحماية',
+        price: 'يحدد بالعيادة',
+        category: 'parasites',
+        image: 'https://png.pngtree.com/png-clipart/20230501/original/pngtree-medicine-spray-bottle-plastic-transparent-bottle-png-image_8998492.png'
+    },
+    {
+        id: 'c3',
+        name: 'تطعيم ثماني / خماسي',
+        price: 'يحدد بالعيادة',
+        category: 'immunity',
+        image: 'https://png.pngtree.com/png-clipart/20220111/original/pngtree-syringe-medical-supplies-health-png-image_7086812.png'
+    }
+];
+
+// Focus on Clinic Products
+const clinicProductsContainer = document.getElementById('clinic-products-container');
+const clinicCategoryBtns = document.querySelectorAll('.clinic-cat-btn');
+
+function renderClinicProducts(category) {
+    if (!clinicProductsContainer) return;
+    clinicProductsContainer.innerHTML = '';
+    
+    let filtered = clinicProducts;
+    if (category !== 'all') {
+        filtered = filtered.filter(p => p.category === category);
+    }
+    
+    if (filtered.length === 0) {
+        clinicProductsContainer.innerHTML = '<p style="text-align: center; grid-column: 1/-1; font-size: 1.2rem; color: var(--light-text);">لا توجد منتجات حالياً في هذا القسم</p>';
+        return;
+    }
+
+    filtered.forEach(product => {
+        const productCard = document.createElement('div');
+        productCard.className = 'product-card';
+        const message = `مرحبا، أود الاستفسار عن ${product.name}`;
+        const whatsappLink = `https://wa.me/201026794767?text=${encodeURIComponent(message)}`;
+
+        productCard.innerHTML = `
+            <div class="product-icon-placeholder clinic-icon">
+                <i class="fas fa-pills"></i>
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">${product.name}</h3>
+                <p class="product-price" style="color:var(--primary-color); font-weight:bold;">${product.price}</p>
+                <a href="${whatsappLink}" target="_blank" class="btn btn-primary" style="margin-top:10px;">
+                    استفسر بالعيادة <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        `;
+        clinicProductsContainer.appendChild(productCard);
+    });
+}
+
+function initClinic() {
+    renderClinicProducts('all');
+    clinicCategoryBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            clinicCategoryBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderClinicProducts(btn.dataset.clinicCategory);
+        });
+    });
+}
+
+// Start Application
 init();
