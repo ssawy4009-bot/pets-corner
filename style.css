@@ -180,7 +180,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('%D8%A8%D8%A7%D9%83%20%D8%AC%D8%B1%D9%88%D9%86%D8%AF/pets_corner_background_no_text.png');
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('assets/pets_corner_background_no_text.png');
     background-size: cover;
     background-position: center;
     height: 80vh;
