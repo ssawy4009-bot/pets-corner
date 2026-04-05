@@ -2,70 +2,70 @@
 const products = [
 
     // ===================== الرمل (لقطط وكلاب) =====================
-    { id: 1, name: 'Benty Sandy Premium', price: 135, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/Benty_Sandy_Premium_Bentonite_Clumping_Cat_Litter_10L_-_Mickey_s_Pets_Store.webp' },
-    { id: 2, name: 'CATFUN Plus White', price: 130, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/CATFUN_Plus_White_Bentonite_Clumping_Cat_Litter_10L_-_Mickeys_Pets_Store.webp' },
-    { id: 3, name: 'Candy Cat', price: 100, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/Candy_Cat_Bentonite_Clumping_Cat_Litter_5L_-_Mickey_s_Pets_Store.webp' },
-    { id: 4, name: 'Kiki Kat', price: 120, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/Kiki_Kat_Bentonite_Clumping_Cat_Litter_10L_-_Mickey_s_Pets_Store.webp' },
-    { id: 5, name: 'Orgo Bentonite', price: 130, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/Orgo_Bentonite_Clumping_Cat_Litter_20L_-_Mickey_s_Pets_Store.webp' },
-    { id: 6, name: 'Vita Maxx', price: 150, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/Vita_Maxx_Bentonite_Clumping_Cat_Litter_20L_-_Mickey_s_Pets_Store.webp' },
-    { id: 7, name: 'Catmoon', price: 135, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/CATMOON.jpg' },
-    { id: 8, name: 'Cat-Kota', price: 60, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/Cat-Kota.jpg' },
-    { id: 9, name: 'Mi Gato (Miiga)', price: 110, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/mi gato.jpg' },
-    { id: 10, name: 'King Clean (Silica)', price: 160, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/King Clean.jpg' },
-    { id: 11, name: 'Zee! Turkish', price: 125, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/Zee.webp' },
-    { id: 12, name: 'Free Cat', price: 110, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/Free Cat .jpg' },
-    { id: 13, name: 'Tommy Cat', price: 40, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/Tommy Cat .webp' },
-    { id: 14, name: 'oPet Turkish', price: 100, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/Untitled-1_21da6551-6c04-4f7b-948c-d78214ebbc3d.webp' },
+    { id: 1, name: 'Benty Sandy Premium', price: 135, categories: ['cat', 'dog'], subcategory: 'litter', image: 'منتجات/القطط/Benty_Sandy_Premium_Bentonite_Clumping_Cat_Litter_10L_-_Mickey_s_Pets_Store.webp' },
+    { id: 2, name: 'CATFUN Plus White', price: 130, categories: ['cat', 'dog'], subcategory: 'litter', image: 'منتجات/القطط/CATFUN_Plus_White_Bentonite_Clumping_Cat_Litter_10L_-_Mickeys_Pets_Store.webp' },
+    { id: 3, name: 'Candy Cat', price: 100, categories: ['cat', 'dog'], subcategory: 'litter', image: 'منتجات/القطط/Candy_Cat_Bentonite_Clumping_Cat_Litter_5L_-_Mickey_s_Pets_Store.webp' },
+    { id: 4, name: 'Kiki Kat', price: 120, categories: ['cat', 'dog'], subcategory: 'litter', image: 'منتجات/القطط/Kiki_Kat_Bentonite_Clumping_Cat_Litter_10L_-_Mickey_s_Pets_Store.webp' },
+    { id: 5, name: 'Orgo Bentonite', price: 130, categories: ['cat', 'dog'], subcategory: 'litter', image: 'منتجات/القطط/Orgo_Bentonite_Clumping_Cat_Litter_20L_-_Mickey_s_Pets_Store.webp' },
+    { id: 6, name: 'Vita Maxx', price: 150, categories: ['cat', 'dog'], subcategory: 'litter', image: 'منتجات/القطط/Vita_Maxx_Bentonite_Clumping_Cat_Litter_20L_-_Mickey_s_Pets_Store.webp' },
+    { id: 7, name: 'Catmoon', price: 135, categories: ['cat', 'dog'], subcategory: 'litter', image: 'منتجات/القطط/CATMOON.jpg' },
+    { id: 8, name: 'Cat-Kota', price: 60, categories: ['cat', 'dog'], subcategory: 'litter', image: 'منتجات/القطط/Cat-Kota.jpg' },
+    { id: 9, name: 'Mi Gato (Miiga)', price: 110, categories: ['cat', 'dog'], subcategory: 'litter', image: 'منتجات/القطط/mi gato.jpg' },
+    { id: 10, name: 'King Clean (Silica)', price: 160, categories: ['cat', 'dog'], subcategory: 'litter', image: 'منتجات/القطط/King Clean.jpg' },
+    { id: 11, name: 'Zee! Turkish', price: 125, categories: ['cat', 'dog'], subcategory: 'litter', image: 'منتجات/القطط/Zee.webp' },
+    { id: 12, name: 'Free Cat', price: 110, categories: ['cat', 'dog'], subcategory: 'litter', image: 'منتجات/القطط/Free Cat .jpg' },
+    { id: 13, name: 'Tommy Cat', price: 40, categories: ['cat', 'dog'], subcategory: 'litter', image: 'منتجات/القطط/Tommy Cat .webp' },
+    { id: 14, name: 'oPet Turkish', price: 100, categories: ['cat', 'dog'], subcategory: 'litter', image: 'منتجات/القطط/Untitled-1_21da6551-6c04-4f7b-948c-d78214ebbc3d.webp' },
 
     // ===================== القطط - دراي فود =====================
-    { id: 17, name: 'Vet Star دراي فود - 1 كجم', price: 100, categories: ['cat'], subcategory: 'dry-food', image: 'المنتجات/القطط/vet_star.jpg', variants: null },
-    { id: 18, name: 'Alpha دراي فود - 1 كجم', price: 170, categories: ['cat'], subcategory: 'dry-food', image: 'المنتجات/القطط/alpha.jpg', variants: null },
-    { id: 19, name: 'Casita دراي فود - 1 كجم', price: 100, categories: ['cat'], subcategory: 'dry-food', image: 'المنتجات/القطط/casita.jpg', variants: null },
-    { id: 20, name: 'Doodzy دراي فود - 1 كجم', price: 100, categories: ['cat'], subcategory: 'dry-food', image: 'المنتجات/القطط/doodzy_dry.jpg', variants: null },
-    { id: 21, name: 'Josera دراي فود - 1.9 كجم', price: 900, categories: ['cat'], subcategory: 'dry-food', image: 'المنتجات/القطط/josera.jpg', variants: null },
-    { id: 22, name: 'aleef (Kitten) دراي فود - 1 كجم', price: 150, categories: ['cat'], subcategory: 'dry-food', image: 'المنتجات/القطط/aleef_kitten.jpg', variants: null },
-    { id: 23, name: 'aleef (Adult) دراي فود - 1 كجم', price: 140, categories: ['cat'], subcategory: 'dry-food', image: 'المنتجات/القطط/aleef_adult.jpg', variants: null },
-    { id: 24, name: 'Pro Performance (Adult Sterilised) - 2 كجم', price: 650, categories: ['cat'], subcategory: 'dry-food', image: 'المنتجات/القطط/pro_perf_adult.jpg', variants: null },
-    { id: 25, name: 'Pro Performance (Kitten) - 2 كجم', price: 650, categories: ['cat'], subcategory: 'dry-food', image: 'المنتجات/القطط/pro_perf_kitten.jpg', variants: null },
-    { id: 26, name: 'Migma دراي فود - 1 كجم', price: 110, categories: ['cat'], subcategory: 'dry-food', image: 'المنتجات/القطط/migma.jpg', variants: null },
+    { id: 17, name: 'Vet Star دراي فود - 1 كجم', price: 100, categories: ['cat'], subcategory: 'dry-food', image: 'منتجات/القطط/vet_star.jpg', variants: null },
+    { id: 18, name: 'Alpha دراي فود - 1 كجم', price: 170, categories: ['cat'], subcategory: 'dry-food', image: 'منتجات/القطط/alpha.jpg', variants: null },
+    { id: 19, name: 'Casita دراي فود - 1 كجم', price: 100, categories: ['cat'], subcategory: 'dry-food', image: 'منتجات/القطط/casita.jpg', variants: null },
+    { id: 20, name: 'Doodzy دراي فود - 1 كجم', price: 100, categories: ['cat'], subcategory: 'dry-food', image: 'منتجات/القطط/doodzy_dry.jpg', variants: null },
+    { id: 21, name: 'Josera دراي فود - 1.9 كجم', price: 900, categories: ['cat'], subcategory: 'dry-food', image: 'منتجات/القطط/josera.jpg', variants: null },
+    { id: 22, name: 'aleef (Kitten) دراي فود - 1 كجم', price: 150, categories: ['cat'], subcategory: 'dry-food', image: 'منتجات/القطط/aleef_kitten.jpg', variants: null },
+    { id: 23, name: 'aleef (Adult) دراي فود - 1 كجم', price: 140, categories: ['cat'], subcategory: 'dry-food', image: 'منتجات/القطط/aleef_adult.jpg', variants: null },
+    { id: 24, name: 'Pro Performance (Adult Sterilised) - 2 كجم', price: 650, categories: ['cat'], subcategory: 'dry-food', image: 'منتجات/القطط/pro_perf_adult.jpg', variants: null },
+    { id: 25, name: 'Pro Performance (Kitten) - 2 كجم', price: 650, categories: ['cat'], subcategory: 'dry-food', image: 'منتجات/القطط/pro_perf_kitten.jpg', variants: null },
+    { id: 26, name: 'Migma دراي فود - 1 كجم', price: 110, categories: ['cat'], subcategory: 'dry-food', image: 'منتجات/القطط/migma.jpg', variants: null },
 
     // ===================== القطط والكلاب - فرش وأدوات =====================
     {
         id: 27, name: 'فرشاه بلاستيك', price: null, categories: ['cat', 'dog'], subcategory: 'brush',
-        image: 'المنتجات/القطط/brush_plastic.jpg',
+        image: 'منتجات/القطط/brush_plastic.jpg',
         variants: [
             { label: 'حجم صغير (S)', price: 75 },
             { label: 'حجم وسط (M)', price: 90 },
             { label: 'حجم كبير (L)', price: 100 }
         ]
     },
-    { id: 28, name: 'فرشاه سيليكون', price: 100, categories: ['cat', 'dog'], subcategory: 'brush', image: 'المنتجات/القطط/brush_silicone.jpg', variants: null },
-    { id: 29, name: 'فلاية Terminator', price: 50, categories: ['cat', 'dog'], subcategory: 'brush', image: 'المنتجات/القطط/terminator.jpg', variants: null },
-    { id: 30, name: 'فرشاه سيليكون صغيره', price: 70, categories: ['cat', 'dog'], subcategory: 'brush', image: 'المنتجات/القطط/brush_silicone_small.jpg', variants: null },
-    { id: 31, name: 'فرشاه جل', price: 90, categories: ['cat', 'dog'], subcategory: 'brush', image: 'المنتجات/القطط/brush_gel.jpg', variants: null },
-    { id: 32, name: 'فرشاه كبيره', price: 150, categories: ['cat', 'dog'], subcategory: 'brush', image: 'المنتجات/القطط/brush_large.jpg', variants: null },
-    { id: 33, name: 'طقم فرشاه بقصافه', price: 150, categories: ['cat', 'dog'], subcategory: 'brush', image: 'المنتجات/القطط/brush_set.jpg', variants: null },
+    { id: 28, name: 'فرشاه سيليكون', price: 100, categories: ['cat', 'dog'], subcategory: 'brush', image: 'منتجات/القطط/brush_silicone.jpg', variants: null },
+    { id: 29, name: 'فلاية Terminator', price: 50, categories: ['cat', 'dog'], subcategory: 'brush', image: 'منتجات/القطط/terminator.jpg', variants: null },
+    { id: 30, name: 'فرشاه سيليكون صغيره', price: 70, categories: ['cat', 'dog'], subcategory: 'brush', image: 'منتجات/القطط/brush_silicone_small.jpg', variants: null },
+    { id: 31, name: 'فرشاه جل', price: 90, categories: ['cat', 'dog'], subcategory: 'brush', image: 'منتجات/القطط/brush_gel.jpg', variants: null },
+    { id: 32, name: 'فرشاه كبيره', price: 150, categories: ['cat', 'dog'], subcategory: 'brush', image: 'منتجات/القطط/brush_large.jpg', variants: null },
+    { id: 33, name: 'طقم فرشاه بقصافه', price: 150, categories: ['cat', 'dog'], subcategory: 'brush', image: 'منتجات/القطط/brush_set.jpg', variants: null },
 
     // ===================== القطط - سكراتش =====================
-    { id: 34, name: 'Rest Cat سكراتش', price: 30, categories: ['cat'], subcategory: 'scratch', image: 'المنتجات/القطط/scratch.jpg', variants: null },
-    { id: 35, name: 'Rest Cat (اصفر) سكراتش', price: 40, categories: ['cat'], subcategory: 'scratch', image: 'المنتجات/القطط/scratch_yellow.jpg', variants: null },
-    { id: 36, name: 'Rest Cat (اسود) سكراتش', price: 50, categories: ['cat'], subcategory: 'scratch', image: 'المنتجات/القطط/scratch_black.jpg', variants: null },
-    { id: 37, name: 'Rest Cat (اخضر) سكراتش', price: 35, categories: ['cat'], subcategory: 'scratch', image: 'المنتجات/القطط/scratch_green.jpg', variants: null },
+    { id: 34, name: 'Rest Cat سكراتش', price: 30, categories: ['cat'], subcategory: 'scratch', image: 'منتجات/القطط/scratch.jpg', variants: null },
+    { id: 35, name: 'Rest Cat (اصفر) سكراتش', price: 40, categories: ['cat'], subcategory: 'scratch', image: 'منتجات/القطط/scratch_yellow.jpg', variants: null },
+    { id: 36, name: 'Rest Cat (اسود) سكراتش', price: 50, categories: ['cat'], subcategory: 'scratch', image: 'منتجات/القطط/scratch_black.jpg', variants: null },
+    { id: 37, name: 'Rest Cat (اخضر) سكراتش', price: 35, categories: ['cat'], subcategory: 'scratch', image: 'منتجات/القطط/scratch_green.jpg', variants: null },
 
     // ===================== الكلاب =====================
-    { id: 38, name: 'دراي فود كلاب بالغة - 15 كجم', price: 850, categories: ['dog'], subcategory: 'dry-food', image: 'المنتجات/كلاب/dry_adult.jpg', variants: null },
-    { id: 39, name: 'رمل تدريب كلاب - 5 كجم', price: 180, categories: ['dog'], subcategory: 'litter', image: 'المنتجات/كلاب/training_litter.jpg', variants: null },
-    { id: 40, name: 'رمل صحي كلاب - 10 كجم', price: 280, categories: ['dog'], subcategory: 'litter', image: 'المنتجات/كلاب/litter_10kg.jpg', variants: null },
-    { id: 41, name: 'طوق جلد للكلاب', price: 120, categories: ['dog'], subcategory: 'collar', image: 'المنتجات/كلاب/leather_collar.jpg', variants: null },
-    { id: 42, name: 'بيت خشبي للكلاب', price: 1200, categories: ['dog'], subcategory: 'house', image: 'المنتجات/كلاب/dog_house.jpg', variants: null },
+    { id: 38, name: 'دراي فود كلاب بالغة - 15 كجم', price: 850, categories: ['dog'], subcategory: 'dry-food', image: 'منتجات/كلاب/dry_adult.jpg', variants: null },
+    { id: 39, name: 'رمل تدريب كلاب - 5 كجم', price: 180, categories: ['dog'], subcategory: 'litter', image: 'منتجات/كلاب/training_litter.jpg', variants: null },
+    { id: 40, name: 'رمل صحي كلاب - 10 كجم', price: 280, categories: ['dog'], subcategory: 'litter', image: 'منتجات/كلاب/litter_10kg.jpg', variants: null },
+    { id: 41, name: 'طوق جلد للكلاب', price: 120, categories: ['dog'], subcategory: 'collar', image: 'منتجات/كلاب/leather_collar.jpg', variants: null },
+    { id: 42, name: 'بيت خشبي للكلاب', price: 1200, categories: ['dog'], subcategory: 'house', image: 'منتجات/كلاب/dog_house.jpg', variants: null },
 
     // ===================== طيور =====================
-    { id: 101, name: 'طعام عصافير الزينة - 1 كجم', price: 85, categories: ['bird'], subcategory: 'food', image: 'المنتجات/طيور/bird_food.jpg', variants: null },
-    { id: 102, name: 'قفص عصافير معدني', price: 350, categories: ['bird'], subcategory: 'cage', image: 'المنتجات/طيور/bird_cage.jpg', variants: null },
+    { id: 101, name: 'طعام عصافير الزينة - 1 كجم', price: 85, categories: ['bird'], subcategory: 'food', image: 'منتجات/طيور/bird_food.jpg', variants: null },
+    { id: 102, name: 'قفص عصافير معدني', price: 350, categories: ['bird'], subcategory: 'cage', image: 'منتجات/طيور/bird_cage.jpg', variants: null },
 
     // ===================== أسماك =====================
-    { id: 103, name: 'طعام أسماك الزينة - 100 جم', price: 45, categories: ['fish'], subcategory: 'food', image: 'المنتجات/اسماك/fish_food.jpg', variants: null },
-    { id: 104, name: 'حوض سمك زينة صغير', price: 450, categories: ['fish'], subcategory: 'aquarium', image: 'المنتجات/اسماك/aquarium.jpg', variants: null }
+    { id: 103, name: 'طعام أسماك الزينة - 100 جم', price: 45, categories: ['fish'], subcategory: 'food', image: 'منتجات/اسماك/fish_food.jpg', variants: null },
+    { id: 104, name: 'حوض سمك زينة صغير', price: 450, categories: ['fish'], subcategory: 'aquarium', image: 'منتجات/اسماك/aquarium.jpg', variants: null }
 ];
 
 // ===== تعريف الأقسام الفرعية =====
