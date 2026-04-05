@@ -1,38 +1,21 @@
 // ===== بيانات المنتجات الحقيقية =====
 const products = [
 
-    // ===================== الرمل (للقطط والكلاب) =====================
-    { id: 1, name: 'Free Cat رمل', price: 110, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/free_cat.jpg', variants: null },
-    { id: 2, name: 'Roza Cat رمل', price: 80, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/roza_cat.jpg', variants: null },
-    { id: 3, name: 'Cat Kota رمل', price: 60, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/cat_kota.jpg', variants: null },
-    { id: 4, name: 'Tommy Cat رمل', price: 40, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/tommy_cat.jpg', variants: null },
-    { id: 5, name: 'Miiga رمل', price: 70, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/miiga.jpg', variants: null },
-    { id: 6, name: 'oPet رمل', price: 100, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/opet.jpg', variants: null },
-    {
-        id: 7, name: 'يورو رمل', price: null, categories: ['cat', 'dog'], subcategory: 'litter',
-        image: 'المنتجات/القطط/euro.jpg',
-        variants: [
-            { label: '5 لتر', price: 100 },
-            { label: '10 لتر', price: 180 }
-        ]
-    },
-    { id: 8, name: 'Catmoon رمل', price: 135, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/catmoon.jpg', variants: null },
-    { id: 9, name: 'King Clean رمل', price: 160, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/king_clean.jpg', variants: null },
-    { id: 10, name: 'Benty Sandy رمل', price: 135, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/benty_sandy.jpg', variants: null },
-    { id: 11, name: 'Doodzy رمل تركي', price: 100, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/doodzy.jpg', variants: null },
-    { id: 12, name: 'OmniGuard رمل', price: 100, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/omniguard.jpg', variants: null },
-    { id: 13, name: 'Zee رمل تركي', price: 115, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/zee.jpg', variants: null },
-    { id: 14, name: 'Lozaro رمل', price: 110, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/lozaro.jpg', variants: null },
-    { id: 15, name: 'ORGO رمل', price: 130, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/orgo.jpg', variants: null },
-    {
-        id: 16, name: 'Gold رمل تركي', price: null, categories: ['cat', 'dog'], subcategory: 'litter',
-        image: 'المنتجات/القطط/gold.jpg',
-        variants: [
-            { label: '5 لتر', price: 100 },
-            { label: '10 لتر', price: 200 },
-            { label: '20 لتر', price: 400 }
-        ]
-    },
+    // ===================== الرمل (لقطط وكلاب) =====================
+    { id: 1, name: 'Benty Sandy Premium', price: 135, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/Benty_Sandy_Premium_Bentonite_Clumping_Cat_Litter_10L_-_Mickey_s_Pets_Store.webp' },
+    { id: 2, name: 'CATFUN Plus White', price: 130, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/CATFUN_Plus_White_Bentonite_Clumping_Cat_Litter_10L_-_Mickeys_Pets_Store.webp' },
+    { id: 3, name: 'Candy Cat', price: 100, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/Candy_Cat_Bentonite_Clumping_Cat_Litter_5L_-_Mickey_s_Pets_Store.webp' },
+    { id: 4, name: 'Kiki Kat', price: 120, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/Kiki_Kat_Bentonite_Clumping_Cat_Litter_10L_-_Mickey_s_Pets_Store.webp' },
+    { id: 5, name: 'Orgo Bentonite', price: 130, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/Orgo_Bentonite_Clumping_Cat_Litter_20L_-_Mickey_s_Pets_Store.webp' },
+    { id: 6, name: 'Vita Maxx', price: 150, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/Vita_Maxx_Bentonite_Clumping_Cat_Litter_20L_-_Mickey_s_Pets_Store.webp' },
+    { id: 7, name: 'Catmoon', price: 135, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/CATMOON.jpg' },
+    { id: 8, name: 'Cat-Kota', price: 60, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/Cat-Kota.jpg' },
+    { id: 9, name: 'Mi Gato (Miiga)', price: 110, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/mi gato.jpg' },
+    { id: 10, name: 'King Clean (Silica)', price: 160, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/King Clean.jpg' },
+    { id: 11, name: 'Zee! Turkish', price: 125, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/Zee.webp' },
+    { id: 12, name: 'Free Cat', price: 110, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/Free Cat .jpg' },
+    { id: 13, name: 'Tommy Cat', price: 40, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/Tommy Cat .webp' },
+    { id: 14, name: 'oPet Turkish', price: 100, categories: ['cat', 'dog'], subcategory: 'litter', image: 'المنتجات/القطط/Untitled-1_21da6551-6c04-4f7b-948c-d78214ebbc3d.webp' },
 
     // ===================== القطط - دراي فود =====================
     { id: 17, name: 'Vet Star دراي فود - 1 كجم', price: 100, categories: ['cat'], subcategory: 'dry-food', image: 'المنتجات/القطط/vet_star.jpg', variants: null },
@@ -132,6 +115,7 @@ function init() {
     renderProducts('all', 'all');
     setupEventListeners();
     initClinic();
+    setupImageModal();
 }
 
 // ===== رسم الأقسام الفرعية =====
@@ -402,7 +386,7 @@ function renderClinicProducts(category) {
         const productCard = document.createElement('div');
         productCard.className = 'product-card';
         const message = `مرحبا، أود الاستفسار عن ${product.name}`;
-        const whatsappLink = `https://wa.me/201026794767?text=${encodeURIComponent(message)}`;
+        const whatsappLink = `https://wa.me/201091365174?text=${encodeURIComponent(message)}`;
         productCard.innerHTML = `
             <div class="product-icon-placeholder clinic-icon">
                 <i class="fas fa-pills"></i>
@@ -434,3 +418,36 @@ function initClinic() {
 
 // ===== تشغيل التطبيق =====
 init();
+
+// ===== نافذة عرض الصورة (Image Modal) =====
+function setupImageModal() {
+    const modal = document.createElement('div');
+    modal.className = 'image-modal-overlay';
+    modal.style.display = 'none';
+    modal.innerHTML = `
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" src="" alt="Zoomed Product">
+    `;
+    document.body.appendChild(modal);
+
+    const modalImg = modal.querySelector('.modal-content');
+    const closeBtn = modal.querySelector('.close-modal');
+
+    const closeModal = () => {
+        modal.classList.remove('active');
+        setTimeout(() => { modal.style.display = 'none'; }, 300);
+    };
+
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('product-img')) {
+            modalImg.src = e.target.src;
+            modal.style.display = 'flex';
+            setTimeout(() => { modal.classList.add('active'); }, 10);
+        }
+    });
+}
