@@ -211,10 +211,13 @@ body {
 
 .hero-content .highlight {
     color: #fff;
-    background: var(--primary-color);
+    background: rgba(216, 67, 21, 0.65);
     padding: 4px 14px;
     border-radius: 8px;
     display: inline-block;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .hero-content p {
