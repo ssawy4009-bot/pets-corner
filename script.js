@@ -172,9 +172,10 @@ function renderProducts(category, subcategory) {
         productCard.className = 'product-card';
 
         // بناء HTML الصورة
+        const imgSrc = product.image ? encodeURI(product.image) : '';
         const imgHtml = product.image
             ? `<div class="product-img-wrapper">
-                  <img src="${product.image}" alt="${product.name}" class="product-img" onerror="this.outerHTML='<div class=\\'product-icon-placeholder text-center\\'><i class=\\'fas fa-paw\\'></i></div>'">
+                  <img src="${imgSrc}" alt="${product.name}" class="product-img" onerror="this.outerHTML='<div class=\\'product-icon-placeholder text-center\\'><i class=\\'fas fa-paw\\'></i></div>'">
                </div>`
             : `<div class="product-icon-placeholder"><i class="fas fa-paw"></i></div>`;
 
