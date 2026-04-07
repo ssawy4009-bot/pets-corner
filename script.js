@@ -56,12 +56,12 @@ const products = [
     { id: 38, name: 'Migma دراي فود كلاب', price: 850, categories: ['dog'], subcategory: 'dry-food', image: 'products/cat/Migma dray.webp', variants: null },
 
     // ===================== طيور =====================
-    { id: 101, name: 'طعام عصافير الزينة - 1 كجم', price: 85, categories: ['bird'], subcategory: 'food', image: 'products/birds/bird_food.jpg', variants: null },
-    { id: 102, name: 'قفص عصافير معدني', price: 350, categories: ['bird'], subcategory: 'cage', image: 'products/birds/bird_cage.jpg', variants: null },
+    { id: 101, name: 'طعام عصافير الزينة - 1 كجم', price: 85, categories: ['bird'], subcategory: 'food', image: 'products/طيور/bird_food.jpg', variants: null },
+    { id: 102, name: 'قفص عصافير معدني', price: 350, categories: ['bird'], subcategory: 'cage', image: 'products/طيور/bird_cage.jpg', variants: null },
 
     // ===================== أسماك =====================
-    { id: 103, name: 'طعام أسماك الزينة - 100 جم', price: 45, categories: ['fish'], subcategory: 'food', image: 'products/fish/fish_food.jpg', variants: null },
-    { id: 104, name: 'حوض سمك زينة صغير', price: 450, categories: ['fish'], subcategory: 'aquarium', image: 'products/fish/aquarium.jpg', variants: null }
+    { id: 103, name: 'طعام أسماك الزينة - 100 جم', price: 45, categories: ['fish'], subcategory: 'food', image: 'products/اسماك/fish_food.jpg', variants: null },
+    { id: 104, name: 'حوض سمك زينة صغير', price: 450, categories: ['fish'], subcategory: 'aquarium', image: 'products/اسماك/aquarium.jpg', variants: null }
 ];
 
 // ===== تعريف الأقسام الفرعية =====
