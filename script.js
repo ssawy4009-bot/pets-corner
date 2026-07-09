@@ -1,3 +1,4 @@
+const API_BASE_URL = 'https://petscornerapi.loca.lt';
 // ===== بيانات المنتجات من السيرفر =====
 let products = [];
 // ===== تعريف الأقسام الفرعية =====
@@ -45,7 +46,7 @@ let currentSubcategory = 'all';
 // ===== تهيئة التطبيق =====
 async function init() {
     try {
-        const res = await fetch('/api/products');
+        const res = await fetch(`${API_BASE_URL}/api/products`, { headers: { 'Bypass-Tunnel-Reminder': 'true' } });
         products = await res.json();
     } catch (e) {
         console.error("Error loading products:", e);
@@ -116,7 +117,7 @@ function renderProducts(category, subcategory) {
         productCard.className = 'product-card';
 
         // بناء HTML الصورة
-        const imgSrc = product.image ? encodeURI(product.image) : '';
+        const imgSrc = product.image ? (product.image.startsWith('http') ? encodeURI(product.image) : `${API_BASE_URL}/${encodeURI(product.image.replace(/^\\//, ''))}`) : '';
         const imgHtml = product.image
             ? `<div class="product-img-wrapper">
                   <img src="${imgSrc}" alt="${product.name}" class="product-img" onerror="this.outerHTML='<div class=\\'product-icon-placeholder text-center\\'><i class=\\'fas fa-paw\\'></i></div>'">
@@ -399,9 +400,9 @@ window.placeOrder = async function(productName, price) {
     if (!customerName) return;
     
     try {
-        const response = await fetch('/api/orders', {
+        const response = await fetch(`${API_BASE_URL}/api/orders`, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 'Content-Type': 'application/json', 'Bypass-Tunnel-Reminder': 'true' },
             body: JSON.stringify({ 
                 customer_name: customerName, 
                 product_name: productName, 
