@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://petscornerapi.loca.lt';
+const API_BASE_URL = 'https://carport-reselect-outgoing.ngrok-free.dev';
 // ===== بيانات المنتجات من السيرفر =====
 let products = [];
 // ===== تعريف الأقسام الفرعية =====
@@ -46,7 +46,9 @@ let currentSubcategory = 'all';
 // ===== تهيئة التطبيق =====
 async function init() {
     try {
-        const res = await fetch(`${API_BASE_URL}/api/products`, { headers: { 'Bypass-Tunnel-Reminder': 'true' } });
+        const res = await fetch(`${API_BASE_URL}/api/products`, {
+            headers: { 'ngrok-skip-browser-warning': 'true', 'Bypass-Tunnel-Reminder': 'true' }
+        });
         products = await res.json();
     } catch (e) {
         console.error("Error loading products:", e);
@@ -402,7 +404,7 @@ window.placeOrder = async function(productName, price) {
     try {
         const response = await fetch(`${API_BASE_URL}/api/orders`, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'Bypass-Tunnel-Reminder': 'true' },
+            headers: { 'Content-Type': 'application/json', 'ngrok-skip-browser-warning': 'true', 'Bypass-Tunnel-Reminder': 'true' },
             body: JSON.stringify({ 
                 customer_name: customerName, 
                 product_name: productName, 
